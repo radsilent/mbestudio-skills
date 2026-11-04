@@ -6,6 +6,42 @@ Systems engineering skills for AI coding agents.
 /plugin marketplace add radsilent/mbestudio-skills
 ```
 
+## MBEstudio MCP server
+
+Connect the AI tool you already use to MBEstudio: reverse engineer existing CAD
+(STEP AP242, QIF), BOMs, KiCad netlists, ReqIF requirements and documents into one
+traceable system model, then generate, verify, simulate and export it. Remote MCP
+over Streamable HTTP; sign in with your email in the browser (OAuth 2.1, no API key).
+Describing MBEstudio and estimating a job's cost need no account; paid tools show
+the cost first and run only within the limit you set.
+
+**Server URL:** `https://studio.vectorstreamsystems.com/mcp`
+
+```bash
+# Claude Code
+claude mcp add --transport http --scope user mbestudio https://studio.vectorstreamsystems.com/mcp
+# Codex
+codex mcp add mbestudio --url https://studio.vectorstreamsystems.com/mcp && codex mcp login mbestudio
+# VS Code (GitHub Copilot)
+code --add-mcp '{"name":"mbestudio","type":"http","url":"https://studio.vectorstreamsystems.com/mcp"}'
+```
+
+Cursor, ChatGPT and Claude Desktop: add a remote MCP server (connector) with the URL above.
+Setup for every client: https://vectorstreamsystems.com/agents ·
+pricing: https://vectorstreamsystems.com/pricing · listed in the official MCP Registry.
+
+### 日本語
+
+既存の CAD（STEP AP242、QIF）、部品表、KiCad ネットリスト、ReqIF 要件、ドキュメントから、
+トレーサブルな1つのシステムモデルを構築（リバースモデリング）し、お使いの AI ツール
+（Claude Code、Codex、Cursor、ChatGPT、Claude Desktop、GitHub Copilot）から検証、
+シミュレーション、エクスポートを実行できるリモート MCP サーバーです。派生開発（差分開発）で、
+変更の影響範囲をモデル上で確認できます。
+
+- サーバー URL: `https://studio.vectorstreamsystems.com/mcp`
+- 設定手順（日本語）: https://vectorstreamsystems.com/ja/agents
+- 料金（日本語）: https://vectorstreamsystems.com/ja/pricing
+
 ## Plugins
 
 ### `mbse-requirements` — free
